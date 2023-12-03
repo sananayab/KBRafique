@@ -79,8 +79,6 @@ The project structure follows a standard React application structure:
   - **App.tsx:** The main entry point of the application.
   - **index.tsx:** Initializes the React application and renders the root component.
 
-## Deployment
 
-To deploy the Jadoo Travel Agency landing page, you can follow the deployment instructions specific to your chosen hosting platform (e.g., Netlify, Vercel, GitHub Pages, etc.). Typically, you need to build the project and configure the hosting platform to serve the generated files.
 
 # KBRafique
