@@ -5,10 +5,10 @@ import Slider from "react-slick";
 import { Button } from "../atoms/Button";
 import { CaretDown, CaretUp } from "@phosphor-icons/react";
 import { Card } from "../molecules/Card";
-// import ProfileImg1 from "../../assets/profile1.jpeg"
-// import ProfileImg2 from "../../assets/profile2.jpeg"
-// import ProfileImg3 from "../../assets/profile3.jpeg"
-// import ProfileImg4 from "../../assets/profile4.jpeg"
+import ProfileImg1 from "../../assets/profile1.jpeg"
+import ProfileImg2 from "../../assets/profile2.jpeg"
+import ProfileImg3 from "../../assets/profile3.jpeg"
+import ProfileImg4 from "../../assets/profile4.jpeg"
 
 const Testimonials = () => {
     const sliderRef = useRef<Slider | null>();
@@ -38,18 +38,18 @@ const Testimonials = () => {
     };
 
     const renderProfileImg = useCallback((element: number) => {
-        // switch (element) {
-        //     case 0:
-        //         return Img2;
-        //     case 1:
-        //         return Img1;
-        //     case 2:
-        //         return Img3;
-        //     case 3:
-        //         return Img4;
-        //     default:
-        //         return "";
-        // }
+        switch (element) {
+            case 0:
+                return ProfileImg1;
+            case 1:
+                return ProfileImg2;
+            case 2:
+                return ProfileImg3;
+            case 3:
+               return ProfileImg4;
+             default:
+                 return "";
+         }
     }, [])
 
     return (
@@ -71,7 +71,8 @@ const Testimonials = () => {
                             {
                                 TestimonialTexts.feedBacks.map((feedBack, index) => (
                                     <div className="w-full">
-                                        <Card key={index} cardClass="bg-white shadow border-[1px] border-color3/10 relative rounded-xl p-4 lg:h-[200px] h-[260px] lg:mb-4 w-full flex gap-4 justify-start" imageAlt={feedBack.person} imageSrc={renderProfileImg(index)} imageWrapperClass="w-20 h-20 rounded-full absolute lg:bottom-4 bottom-3 right-4 overflow-hidden" cover="object-cover object-top" textWrapperClass="flex flex-col justify-center gap-6">
+                                        <Card key={index} cardClass="bg-white shadow border-[1px] border-color3/10 relative rounded-xl p-4 lg:h-[200px] h-[260px] lg:mb-4 w-full flex gap-4 justify-start" imageAlt={feedBack.person} 
+                                        imageSrc={renderProfileImg(index)} imageWrapperClass="w-20 h-20 rounded-full absolute lg:bottom-4 bottom-3 right-4 overflow-hidden" cover="object-cover object-top" textWrapperClass="flex flex-col justify-center gap-6">
                                             <Text as="q" className="text-[0.84rem] font-light text-color3">
                                                 {feedBack.text}
                                             </Text>
